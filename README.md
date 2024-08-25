@@ -9,7 +9,7 @@ POST method endpoint takes in the request (JSON) and returns the following:
 4. College Roll Number
 5. Array for numbers
 6. Array for alphabets
-7. Highest Alphabet in the input array of alphabets
+7. Array with the highest lowercase alphabet 
 GET method endpoint doesn’t take any user input, it just returns an operation_code
 
 ### Deployed site
