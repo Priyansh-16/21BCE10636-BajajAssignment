@@ -1,5 +1,5 @@
 
-## Bajaj Finserv Health Track 3rd round task
+## Bajaj Finserv Health Challenge ( Qualifier 1 )
 ### Problem statement
 Build and host a REST API with one endpoint that accepts requests with both GET and POST methods.
 POST method endpoint takes in the request (JSON) and returns the following:

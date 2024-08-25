@@ -12,7 +12,7 @@ app
     const data = req.body.data || [];
     const numbers = [];
     const alphabets = [];
-    let highest_alphabet = "";
+    let highest_lowercase_alphabet = "";
 
     for (const item of data) {
       if (!isNaN(item)) {
@@ -20,22 +20,25 @@ app
       } else if (item.length === 1 && isNaN(item)) {
         alphabets.push(item);
         if (
-          !highest_alphabet ||
-          item.toUpperCase() > highest_alphabet.toUpperCase()
+          item === item.toLowerCase() &&
+          (highest_lowercase_alphabet === "" ||
+            item > highest_lowercase_alphabet)
         ) {
-          highest_alphabet = item;
+          highest_lowercase_alphabet = item;
         }
       }
     }
 
     res.json({
       is_success: true,
-      user_id: "sanhita17",
-      email: "sanhita.kundu2020@vitstudent.ac.in",
-      roll_number: "20BEC0215",
+      user_id: "priyansh-16",
+      email: "priyansh.singh2021@vitbhopal.ac.in",
+      roll_number: "21BCE10636",
       numbers: numbers,
       alphabets: alphabets,
-      highest_alphabet: highest_alphabet ? [highest_alphabet] : [],
+      highest_lowercase_alphabet: highest_lowercase_alphabet
+        ? [highest_lowercase_alphabet]
+        : [],
     });
   });
 
